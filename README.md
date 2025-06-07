@@ -67,7 +67,7 @@ docker-compose：
 ```
 services:
   dns_change:
-    image: crpi-gy45dxxqbfmdtsvs.cn-beijing.personal.cr.aliyuncs.com/liueic-github/dns_change:latest
+    image: ghcr.io/liueic/typecho_dnstypecho-dns-failover:latest
     container_name: dns_change
     restart: always
     env_file:
