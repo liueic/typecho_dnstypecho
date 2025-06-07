@@ -1,0 +1,9 @@
+services:
+  dns_change:
+    image: ghcr.io/liueic/typecho_dnstypecho-dns-failover:latest
+    container_name: dns_change
+    restart: always
+    env_file:
+      - .env
+    command: >
+      sh -c "env > /tmp/env.txt && cat /tmp/env.txt && exec docker-entrypoint.sh"
